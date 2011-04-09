@@ -33,7 +33,6 @@ function openDictionaryPage(e) {
   var selectedText = e.target.getSelectionText();
 
   if (selectedText != null) {
-    console.log("Selection: " + selectedText);
     tab.dispatchMessage("translate", selectedText);
   }
 }
