@@ -30,11 +30,17 @@ var keyboard = new Keyboard({
     defaultEventType: 'keyup',
     events: {
         "alt+shift+d": openDictionaryPage,
+        "shift+d":     openDictionaryPage,
         "alt+shift+s": openSpanishDictionaryPage,
+        "shift+s":     openSpanishDictionaryPage,
         "alt+shift+f": openFrenchDictionaryPage,
+        "shift+f":     openFrenchDictionaryPage,
         "alt+shift+p": openPortugueseDictionaryPage,
+        "shift+p":     openPortugueseDictionaryPage,
         "alt+shift+i": openItalianDictionaryPage,
-        "alt+shift+g": openGermanDictionaryPage
+        "shift+i":     openItalianDictionaryPage,
+        "alt+shift+g": openGermanDictionaryPage,
+        "shift+g":     openGermanDictionaryPage
     },
     active: true
 });
