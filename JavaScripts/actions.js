@@ -57,6 +57,10 @@ function translationUrlFor(from, to, text) {
     return "http://www.portuguesedictionary.net/" + text + ".htm";
   }
 
+  if(from == "fr" && to == "en") {
+    return "http://dictionary.reverso.net/french-english/" + text;
+  }
+
   return "http://wordreference.com/" + from + to + "/" + text;
 }
 
