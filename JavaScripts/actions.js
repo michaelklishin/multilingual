@@ -69,29 +69,20 @@ function handleTranslate(text) {
   return translate.apply(this, [s.primaryLanguage, s.translateTo, text]);
 }
 
-function handleTranslateFromSpanish(text) {
-  var s              = safari.extension.settings;
 
-  return translate.apply(this, ["es", s.translateTo, text]);
+/* A helper that factors out structural duplication between handlers */
+function languageSpecificTranslationHandlerFor(targetLanguage) {
+  return function(text) {
+    var s              = safari.extension.settings;
+
+    return translate.apply(this, [targetLanguage, s.translateTo, text]);
+  };
 }
 
-function handleTranslateFromFrench(text) {
-  var s              = safari.extension.settings;
-
-  return translate.apply(this, ["fr", s.translateTo, text]);
-}
-
-function handleTranslateFromPortuguese(text) {
-  var s              = safari.extension.settings;
-
-  return translate.apply(this, ["pt", s.translateTo, text]);
-}
-
-function handleTranslateFromItalian(text) {
-  var s              = safari.extension.settings;
-
-  return translate.apply(this, ["it", s.translateTo, text]);
-}
+var handleTranslateFromSpanish    = languageSpecificTranslationHandlerFor("es");
+var handleTranslateFromFrench     = languageSpecificTranslationHandlerFor("fr");
+var handleTranslateFromPortuguese = languageSpecificTranslationHandlerFor("pt");
+var handleTranslateFromItalian    = languageSpecificTranslationHandlerFor("it");
 
 
 
@@ -103,21 +94,18 @@ function translate(from, to, text) {
   return tab;
 }
 
-function translateFromSpanish(text) {
-  return translate("es", safari.extension.settings.translateTo, text);
+/* Another helper that factors out structural duplication */
+function languageSpecificTranslationFor(targetLanguage) {
+  return function(text) {
+    return translate(targetLanguage, safari.extension.settings.translateTo, text);
+  };
 }
 
-function translateFromFrench(text) {
-  return translate("fr", safari.extension.settings.translateTo, text);
-}
+var translateFromSpanish    = languageSpecificTranslationFor("es");
+var translateFromFrench     = languageSpecificTranslationFor("fr");
+var translateFromPortuguese = languageSpecificTranslationFor("pt");
+var translateFromItalian    = languageSpecificTranslationFor("it");
 
-function translateFromPortuguese(text) {
-  return translate("pt", safari.extension.settings.translateTo, text);
-}
-
-function translateFromItalian(text) {
-  return translate("it", safari.extension.settings.translateTo, text);
-}
 
 
 
