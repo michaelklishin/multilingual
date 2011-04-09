@@ -109,6 +109,7 @@ var translateFromSpanish    = languageSpecificTranslationFor("es");
 var translateFromFrench     = languageSpecificTranslationFor("fr");
 var translateFromPortuguese = languageSpecificTranslationFor("pt");
 var translateFromItalian    = languageSpecificTranslationFor("it");
+var translateFromGerman     = languageSpecificTranslationFor("de");
 
 
 
