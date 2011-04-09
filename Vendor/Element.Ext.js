@@ -9,11 +9,6 @@ Element.implement({
 			length = text.length;
 			start = selection.anchorOffset - length;
 			end = selection.anchorOffset;
-			
-			if (Browser.Engine.presto) {
-				start = selection.anchorOffset;
-				end = start + length;
-			}
 		}
 		else if ($defined(doc.selection)) {
 			var range = doc.selection.createRange(),
