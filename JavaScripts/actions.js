@@ -111,11 +111,11 @@ var translateFromItalian    = languageSpecificTranslationFor("it");
 
 
 function translationUrlFor(from, to, text) {
+  /*
   if(from == "es" && to == "en") {
     return "http://www.spanishdict.com/translate/" + text;
   }
 
-  /*
   if(from == "pt" && to == "en") {
     return "http://www.portuguesedictionary.net/" + text + ".htm";
   }
