@@ -15,13 +15,14 @@ function dispatchCommand(e) {
 function dispatchMessage(msg) {
   switch(msg.name) {
     //case "fetchQuickTranslationShortcut": handleFetchQuickTranslationShortcut(msg);
-    case "translate":   handleTranslate(msg); break;
+    case "translate":   handleTranslate(msg.message); break;
 
     case "translate":               handleTranslate(msg.message);               break;
     case "translateFromSpanish":    handleTranslateFromSpanish(msg.message);    break;
     case "translateFromFrench":     handleTranslateFromFrench(msg.message);     break;
     case "translateFromPortuguese": handleTranslateFromPortuguese(msg.message); break;
     case "translateFromItalian":    handleTranslateFromItalian(msg.message);    break;
+    case "translateFromGerman":     handleTranslateFromGerman(msg.message);     break;    
   }
 }
 
@@ -43,6 +44,9 @@ function dispatchContextMenu(e) {
     }
     if(primaryLanguage != "it") {
       e.contextMenu.appendContextMenuItem("translateFromItalian",    "Translate from Italian");
+    }
+    if(primaryLanguage != "de") {
+      e.contextMenu.appendContextMenuItem("translateFromGerman",    "Translate from German");
     }
   }
 }
@@ -82,7 +86,7 @@ function languageSpecificTranslationHandlerFor(targetLanguage) {
 var handleTranslateFromSpanish    = languageSpecificTranslationHandlerFor("es");
 var handleTranslateFromFrench     = languageSpecificTranslationHandlerFor("fr");
 var handleTranslateFromPortuguese = languageSpecificTranslationHandlerFor("pt");
-var handleTranslateFromItalian    = languageSpecificTranslationHandlerFor("it");
+var handleTranslateFromGerman     = languageSpecificTranslationHandlerFor("de");
 
 
 

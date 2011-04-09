@@ -23,6 +23,7 @@
 			<string>French</string>
 			<string>Portuguese</string>
 			<string>Italian</string>
+			<string>German</string>
 		</array>
 		<key>Type</key>
 		<string>RadioButtons</string>
@@ -32,6 +33,7 @@
 			<string>fr</string>
 			<string>pt</string>
 			<string>it</string>
+			<string>de</string>
 		</array>
 	</dict>
 	<dict>

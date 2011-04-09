@@ -33,7 +33,8 @@ var keyboard = new Keyboard({
         "alt+shift+s": openSpanishDictionaryPage,
         "alt+shift+f": openFrenchDictionaryPage,
         "alt+shift+p": openPortugueseDictionaryPage,
-        "alt+shift+i": openItalianDictionaryPage
+        "alt+shift+i": openItalianDictionaryPage,
+        "alt+shift+g": openGermanDictionaryPage
     },
     active: true
 });
@@ -76,6 +77,14 @@ function openItalianDictionaryPage(e) {
 
   if (selectedText != null) {
     tab.dispatchMessage("translateFromItalian", selectedText);
+  }
+}
+
+function openGermanDictionaryPage(e) {
+  var selectedText = e.target.getSelectionText();
+
+  if (selectedText != null) {
+    tab.dispatchMessage("translateFromGerman", selectedText);
   }
 }
 
