@@ -13,6 +13,12 @@ function dispatchMessage(msg) {
  safari.self.addEventListener("message", dispatchMessage, false)
 */
 
+function dispatchContextMenu(e) {
+  safari.self.tab.setContextMenuEventUserInfo(e, e.target.getSelectionText());
+}
+
+function dispatchValidate() {
+}
 
 
 //
@@ -44,3 +50,5 @@ function openDictionaryPage(e) {
 //
 
 // document.addEvent("dblclick", openDictionaryPage);
+document.addEvent("contextmenu", dispatchContextMenu);
+document.addEvent("validate",    dispatchValidate);
