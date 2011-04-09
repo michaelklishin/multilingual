@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Languages</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>es</string>
+		<key>Key</key>
+		<string>primaryLanguage</string>
+		<key>Secure</key>
+		<false/>
+		<key>Title</key>
+		<string>Primary target</string>
+		<key>Titles</key>
+		<array>
+			<string>Spanish</string>
+			<string>French</string>
+			<string>Portuguese</string>
+			<string>Italian</string>
+		</array>
+		<key>Type</key>
+		<string>RadioButtons</string>
+		<key>Values</key>
+		<array>
+			<string>es</string>
+			<string>fr</string>
+			<string>pt</string>
+			<string>it</string>
+		</array>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>en</string>
+		<key>Key</key>
+		<string>translateTo</string>
+		<key>Secure</key>
+		<false/>
+		<key>Title</key>
+		<string>Translate to</string>
+		<key>Titles</key>
+		<array>
+			<string>English</string>
+			<string>Spanish</string>
+		</array>
+		<key>Type</key>
+		<string>RadioButtons</string>
+		<key>Values</key>
+		<array>
+			<string>en</string>
+			<string>es</string>
+		</array>
+	</dict>
+</array>
+</plist>
