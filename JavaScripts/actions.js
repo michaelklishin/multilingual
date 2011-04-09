@@ -3,24 +3,29 @@
 //
 
 function dispatchCommand(e) {
-  console.log("actions.dispatchValidate");
+  console.log("actions.dispatchCommand: " + e.command);
   switch(e.command) {
-    case "translateFromSpanish":    translateFromSpanish(e); break;
-    case "translateFromFrench":     translateFromFrench(e); break;
-    case "translateFromPortuguese": translateFromPortuguese(e); break;
-    case "translateFromItalian":    translateFromItalian(e); break;
+    case "translateFromSpanish":    translateFromSpanish(e.userInfo); break;
+    case "translateFromFrench":     translateFromFrench(e.userInfo); break;
+    case "translateFromPortuguese": translateFromPortuguese(e.userInfo); break;
+    case "translateFromItalian":    translateFromItalian(e.userInfo); break;
   }
 }
 
 function dispatchMessage(msg) {
   switch(msg.name) {
     //case "fetchQuickTranslationShortcut": handleFetchQuickTranslationShortcut(msg);
-    case "translate":                     handleTranslate(msg); break;
+    case "translate":   handleTranslate(msg); break;
+
+    case "translate":               handleTranslate(msg.message);               break;
+    case "translateFromSpanish":    handleTranslateFromSpanish(msg.message);    break;
+    case "translateFromFrench":     handleTranslateFromFrench(msg.message);     break;
+    case "translateFromPortuguese": handleTranslateFromPortuguese(msg.message); break;
+    case "translateFromItalian":    handleTranslateFromItalian(msg.message);    break;
   }
 }
 
 function dispatchValidate(e) {
-  console.log("actions.dispatchValidate");
 }
 
 function dispatchContextMenu(e) {
@@ -58,11 +63,37 @@ function handleFetchQuickTranslationShortcut(msg) {
 }
 
 
-function handleTranslate(msg) {
+function handleTranslate(text) {
   var s              = safari.extension.settings;
 
-  return translate.apply(this, [s.primaryLanguage, s.translateTo, msg.message]);
+  return translate.apply(this, [s.primaryLanguage, s.translateTo, text]);
 }
+
+function handleTranslateFromSpanish(text) {
+  var s              = safari.extension.settings;
+
+  return translate.apply(this, ["es", s.translateTo, text]);
+}
+
+function handleTranslateFromFrench(text) {
+  var s              = safari.extension.settings;
+
+  return translate.apply(this, ["fr", s.translateTo, text]);
+}
+
+function handleTranslateFromPortuguese(text) {
+  var s              = safari.extension.settings;
+
+  return translate.apply(this, ["pt", s.translateTo, text]);
+}
+
+function handleTranslateFromItalian(text) {
+  var s              = safari.extension.settings;
+
+  return translate.apply(this, ["it", s.translateTo, text]);
+}
+
+
 
 
 function translate(from, to, text) {
@@ -72,20 +103,20 @@ function translate(from, to, text) {
   return tab;
 }
 
-function translateFromSpanish(e) {
-  return translate("es", safari.extension.settings.translateTo, e.userInfo);
+function translateFromSpanish(text) {
+  return translate("es", safari.extension.settings.translateTo, text);
 }
 
-function translateFromFrench(e) {
-  return translate("fr", safari.extension.settings.translateTo, e.userInfo);
+function translateFromFrench(text) {
+  return translate("fr", safari.extension.settings.translateTo, text);
 }
 
-function translateFromPortuguese(e) {
-  return translate("pt", safari.extension.settings.translateTo, e.userInfo);
+function translateFromPortuguese(text) {
+  return translate("pt", safari.extension.settings.translateTo, text);
 }
 
-function translateFromItalian(e) {
-  return translate("it", safari.extension.settings.translateTo, e.userInfo);
+function translateFromItalian(text) {
+  return translate("it", safari.extension.settings.translateTo, text);
 }
 
 
