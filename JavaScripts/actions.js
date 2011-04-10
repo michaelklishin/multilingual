@@ -86,6 +86,7 @@ function languageSpecificTranslationHandlerFor(targetLanguage) {
 var handleTranslateFromSpanish    = languageSpecificTranslationHandlerFor("es");
 var handleTranslateFromFrench     = languageSpecificTranslationHandlerFor("fr");
 var handleTranslateFromPortuguese = languageSpecificTranslationHandlerFor("pt");
+var handleTranslateFromItalian    = languageSpecificTranslationHandlerFor("it");
 var handleTranslateFromGerman     = languageSpecificTranslationHandlerFor("de");
 
 
