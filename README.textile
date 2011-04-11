@@ -1,6 +1,6 @@
 h2. What is Multilingual
 
-Multilingual is a Safari 5 extension that strives to be a multilingual dictionary that doesn't suck.
+Multilingual is a Safari 5 extension designed for people who deal with texts in multiple languages on a daily basis.
 We specifically focus on translation of individual words and only target Safari. For Firefox and Chrome,
 there is a number of nice extensions that together provide pretty good experience.
 
