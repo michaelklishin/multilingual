@@ -37,6 +37,8 @@ Right now we provide several hardcoded shortcuts that translate selected word:
  * Option/Alt + Shift + i translates from Italian to LoC
  * Option/Alt + Shift + g translates from German to LoC
 
+If at least one word on the page is selected, contextual menu (that you see on right-click) has multiple
+"Translate from ..." items.
 
 
 h2. But isn't Google Translate, like, the best?
@@ -60,7 +62,7 @@ Then "try Wordreference":http://www.wordreference.com/fren/dit. Oceans of differ
 h2. A work in progress
 
 Multilingual is still a work in progress. It effectively works with just one source at the moment.
-However, it already saves it's author tens of munites every day, after maybe a couple of hours of work.
+However, it already saves it's author tens of munites every day.
 
 
 
