@@ -25,7 +25,7 @@ form. This increases amount of work and will possibly break Multilingual when so
 h2. How to install and use it
 
 "Download extension package":https://github.com/downloads/michaelklishin/multilingual/multilingual_for_safari_latest_release.safariextz and double-click
-it.
+the file.
 
 
 Right now we provide several hardcoded shortcuts that translate selected word:
