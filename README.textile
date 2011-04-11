@@ -1,0 +1,66 @@
+h2. What is Multilingual
+
+Multilingual is a Safari 5 extension that strives to be a multilingual dictionary that doesn't suck.
+We specifically focus on translation of individual words and only target Safari. For Firefox and Chrome,
+there is a number of nice extensions that together provide pretty good experience.
+
+
+
+h2. Features we have in mind
+
+ * Multiple providers that can cover many language combinations. Hand-pick best dictionaries out there, do not target just one (that may
+   be excellent for Spanish but fail to support Portuguese, for example).
+ * Efficient shortcuts that do not clash with system-wide shortcuts (like it is the case with some Firefox extensions)
+ * Translation of words on double-click (very efficient but may not work on some websites).
+ * Both "display a pop-up" and "open a new tab" modes.
+ * Aggregation of multiple sources (only makes sense for "pop-up mode").
+ * Keep track of words and phrases you translate most often.
+ * Fall back to text-oriented translators (like Google Translate) for full phrases.
+
+Unfortunately, except for Google Translate, many excellent dictionaries on the Web do not provide API in any
+form. This increases amount of work and will possibly break Multilingual when sources update their page markup.
+
+
+
+h2. How to install and use it
+
+Right now we provide several hardcoded shortcuts:
+
+ * Option/Alt + Shift + d translates from your primary target language into language of your choice (LoC, either English or Spanish right now).
+ * Option/Alt + Shift + s translates from Spanish to LoC
+ * Option/Alt + Shift + f translates from French to LoC
+ * Option/Alt + Shift + p translates from Portuguese to LoC
+ * Option/Alt + Shift + i translates from Italian to LoC
+ * Option/Alt + Shift + g translates from German to LoC
+
+
+
+h2. But isn't Google Translate, like, the best?
+
+Google Translate may be a fine translator overall (don't quote us on that) but as a dictionary,
+it is years behind many other resources on the Web (like "Wordreference":http://wordreference.com).
+
+
+
+h2. But isn't Langalot an awesome dictionary for the 21st century that is super-efficient?
+
+Langalot is fast and definitely doesn't feel like product of early 90s but it uses too few sources
+(mainly Wiktionary) and thus is nearly useless for idiomatic expressions. It also does not
+"de-conjugate" verbs (an important downside for Romance languages, for example) and when number of
+possible results is large, it's "nice Google-like UI" falls down on it's face.
+
+Try querying Langalot for "dit" and "see what it yields":http://langalot.com/en?q=dit&locale=en#dit.
+Then "try Wordreference":http://www.wordreference.com/fren/dit. Oceans of difference.
+
+
+h2. A work in progress
+
+Multilingual is still a work in progress. It effectively works with just one source at the moment.
+However, it already saves it's author tens of munites every day, after maybe a couple of hours of work.
+
+
+
+h2. License & copyright.
+
+Multilingual is licensed under "Apache 2.0 license":http://www.apache.org/licenses/LICENSE-2.0.html.
+Copyright 2011, Michael S. Klishin and other contributors.
